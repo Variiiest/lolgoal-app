@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.2/tailwind.min.css" integrity="sha512-l7qZAq1JcXdHei6h2z8h8sMe3NbMrmowhOl+QkP3UhifPpCW2MC4M0i26Y8wYpbz1xD9t61MLT9L1N773dzlOA==" crossorigin="anonymous" />
+        <!-- ===== CSS ===== -->
+        <link rel="shortcut icon" href="static/img/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="static/styles.css">
+        <link rel="stylesheet" href="static/custom.css">
+
+        <title>LolGoal : Building the projects with others</title>
+    </head>
+    <body class="bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500">
+        <header class="header">
+            <a href="{{url_for('home')}}" class="header__logo">
+                <img src="../static/img/lolGoal.png" alt=""></a>
+
+            <i class='bx bx-menu header__toggle' id="header-toggle"></i>
+
+            <nav class="nav" id="nav-menu">
+                <div class="nav__content bd-grid">
+                    <a href="{{url_for('home')}}" class="nav__fil">
+                        <div class="nav__img">
+                            <img src="../static/img/lolGoal.png" alt="">
+                        </div>
+                    </a>
+    
+                    <div class="nav__menu">
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="{{url_for('home')}}" class="nav__link">Home</a></li>
+    
+                            <li class="nav__item ">
+                                <a href="{{url_for('startup')}}" class="nav__link">Startup</i></a>
+                                    
+
+                            </li>
+    
+                            <li class="nav__item"><a href="{{url_for('yourwork')}}" class="nav__link">YourWork</a></li>
+
+                            <li class="nav__item dropdown">
+                                <a href="#" class="nav__link dropdown__link">Extensions<i class='bx bx-chevron-down dropdown__icon'></i></a>
+                                    
+    
+                                <ul class="dropdown__menu">
+                                    <li class="dropdown__item"><a href="{{url_for('meetings')}}" class="nav__link">Meetings</a></li>
+                                    <li class="dropdown__item"><a href="{{url_for('projectlist')}}" class="nav__link">Projects</a></li>
+                                </ul>
+                            </li>                    <li class="nav__item dropdown">
+                              <a href="#" class="nav__link dropdown__link"> Mentor<i class='bx bx-chevron-down dropdown__icon'></i></a>
+                                  
+  
+                              <ul class="dropdown__menu">
+                                  <li class="dropdown__item"><a href="{{url_for('mentorsignup')}}" class="nav__link">Sign Up</a></li>
+                                  <li class="dropdown__item"><a href="{{url_for('mentorlogin')}}" class="nav__link">Login</a></li>
+                                  
+                                  <li class="dropdown__item"><a href="{{url_for('createproject')}}" class="nav__link">Create Project</a></li>
+                              </ul>
+                          </li>
+               <a href="{{url_for('login')}}"><button class="ml-2 inline-flex text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg">
+                LOGIN</button></a>    
+                <a href="{{url_for('register')}}"><button class="ml-2 inline-flex text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg">SIGN UP</button>
+                        
+                </a></ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+{% block content%}
+
+{%endblock %}
+
+
+
+<!-- Footer Section -->
+<footer class="text-blue-500 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-no-wrap flex-wrap flex-col">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+         <img src="{{url_for('static',filename='/img/lolGoal.png')}}" alt="">
+        </a>
+        <p class="mt-2 text-sm text-blue-700">Find your next project </p>
+            <p class="text-sm text-blue-700">mentor,partner </p>
+            <p class="text-sm text-blue-700">to enhance your project-based learning</p>
+      </div>
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">UPCOMING</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-blue-600 hover:text-white" href="/error">LolMerch</a>
+            </li>
+            <li>
+              <a class="text-blue-600 hover:text-white" href="/error">LolDev</a>
+            </li>
+            <li>
+              <a class="text-blue-600 hover:text-white" href="/error">LolMeet</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">SERVICES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-blue-600 hover:text-white" href="{{url_for('yourwork')}}">YourWork</a>
+            </li>
+            <li>
+              <a class="text-blue-600 hover:text-white" href="{{url_for('startup')}}">Startup
+              </a>
+            </li>
+            <li>
+              <a class="text-blue-600 hover:text-white" href="{{url_for('meetings')}}">Meetings</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">BUSINESS</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-blue-600 hover:text-white" href="/error">Choose a team</a>
+            </li>
+            <li>
+              <a class="text-blue-600 hover:text-white" href="/error">Partner</a>
+            </li>
+            <li>
+              <a class="text-blue-600 hover:text-white" href="/error">Completed Projects</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">OTHERS</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-blue-600 hover:text-white" target="_blank" href="https://angel.co/company/lolgoal/jobs/1014033-frontend-intern">Jobs</a>
+            </li>
+            <li>
+              <a class="text-blue-600 hover:text-white" href="error">Fundraise</a>
+            </li>
+            <li>
+              <a class="text-blue-600 hover:text-white">Write Us</a>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-800">
+      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <p class="text-blue-600 text-sm text-center sm:text-left">© 2020- 2021 Lolgoal
+
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          <a class="text-blue-600">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-blue-600">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-blue-600">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-blue-600">
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+              <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+<!--===== MAIN JS =====-->
+<script src="{{url_for('static',filename='/main.js')}}"></script>
+</body>
+</html>

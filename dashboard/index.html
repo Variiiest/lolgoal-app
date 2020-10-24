@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>LolGoal -Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="../src/img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="bg-gray-800 site-nav">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16">
+            <div class="flex items-center">
+                <div class="mr-5 flex md:hidden">
+                    <button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white focus:outline-none focus:text-white menu-icon">
+                        <i class="lni lni-menu text-xl"></i>
+                    </button>
+                </div>
+                <!-- Mobile menu button ends here -->
+                <div class="flex-shrink-0">
+                    <img src="../src/img/lolGoal.png" alt="Workflow logo">
+                </div>
+                <!-- Site logo ends here -->
+                <div class="bg-gray-900 nav-links md:block md:bg-transparent">
+                    <div class="md:ml-10 md:flex justify-between">
+                        <a href="#" class="px-3 py-2 md:mr-3 rounded-md text-sm font-medium text-white focus:outline-none focus:text-white focus:bg-gray-700 hover:bg-gray-700">Overview</a>
+            
+                        <a href="#" class="px-3 py-2  text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 ">Tasks</a>
+
+                        
+                        <a href="#" class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 ">Your Project</a>
+                        
+                        <a href="#" class="px-3 py-2  text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Students</a>
+                        
+                        <a href="#" class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 ">Mentors</a>
+                        
+                        <a href="#" class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Blog</a>
+                        
+                    </div>
+                </div>
+                <!-- Site nav links here -->
+            </div>
+            <div class="nav-right">
+              <div class="ml-4 flex items-center md:ml-6">
+                <button class="p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700" aria-label="Notifications">
+                  <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                  </svg>
+                </button>
+                <!-- Notification button ends here -->
+                    
+                <div class="ml-3 relative">
+                  <div>
+                    <button class="max-w-xs flex items-center text-sm rounded-full text-white focus:outline-none focus:shadow-solid user-link" id="user-menu" aria-label="User menu" aria-haspopup="true">
+                      <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                    </button>
+                  </div>
+                  <!-- Profle icon menu ends here -->
+                  <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg user-dropdown">
+                    <div class="py-1 rounded-md bg-white shadow-xs" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200" role="menuitem">Your Profile</a>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200" role="menuitem">Sign out</a>
+                    </div>
+                  </div>
+                  <!-- Profile dropdown end here -->
+                </div>
+              </div>
+            </div>
+            <!-- nav right ends here -->
+          </div>
+        </div>
+    </nav>
+    <!--Site nav end here-->
+
+    <header class="bg-white shadow">
+        <div class="mx-auto py-3 px-4 sm:px-6 lg:px-8">
+            <div class="md:flex justify-between items-center">
+                <div class="md:flex justify-between w-full">
+                    <h1 class="flex-initial text-2xl font-bold leading-tight text-gray-900 mb-3 md:mb-0 md:mr-5">
+                        Overview
+                    </h1>
+                    <div class="flex flex-auto justify-between items-center relative">
+                        <div class="display-tab inline-flex items-center relative rounded bg-gray-300">
+                            <button class="text-sm text-gray-800 font-medium py-1 px-2 leading-3 h-8 focus:outline-none focused" data-target="table-display" data-display-tab="1">
+                                <i class="lni lni-grid mr-1"></i> Table
+                            </button>
+                            <button class="text-sm text-gray-800 font-medium py-1 px-2 leading-3 h-8 focus:outline-none" data-target="board-display" data-display-tab="2">
+                                <i class="lni lni-grid-alt mr-1"></i> Board
+                            </button>
+                        </div>       
+                        <div class="flex items-center justify-between md:justify-end">
+                            <div class="header-icon header-search">
+                                <i class="text-gray-500 hover:text-gray-700 p-3 cursor-pointer lni lni-search-alt"></i>                                
+                            </div>
+                            <div class="header-icon relative" data-tooltip="Filter">
+                                <i class="text-gray-500 hover:text-gray-700 p-3 cursor-pointer lni lni-funnel setting-more"></i>
+                                <div class="shadow bg-white rounded-lg absolute right-0 setting-menu-top w-48 bg-white z-20 pb-3 pt-1 setting-menu md:right-auto md:left-0">
+                                    <div class="p-2">
+                                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="position-input">
+                                            Project
+                                        </label>
+                                        <div class="relative">
+                                            <select name="position_filter" id="position-input" class="text-sm block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                                                <option value="">Any</option>
+                                                <option value=""></option>
+                                                <option value="">Shopify Developer</option>
+                                                <option value="">UI/UX Developer</option>
+                                                <option value="">WordPress Developer</option>
+                                            </select>
+                                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-2">
+                                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="position-input">
+                                            ECTC
+                                        </label>
+                                        <div class="relative">
+                                            <select name="ectc_filter" id="ectc-input" class="text-sm block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                                                <option value="">Any</option>
+                                                <option value=""> &lt; 15,000</option>
+                                                <option value="">15,000 - 40,000</option>
+                                                <option value="">> 40,000</option>
+                                            </select>
+                                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-2">
+                                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="position-input">
+                                            Experience
+                                        </label>
+                                        <div class="relative">
+                                            <select name="ectc_filter" id="exp-input" class="text-sm block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                                                <option value="">Any</option>
+                                                <option value="">Fresher</option>
+                                                <option value="">1</option>
+                                                <option value="">2</option>
+                                                <option value="">3</option>
+                                                <option value="">4</option>
+                                                <option value="">5</option>
+                                                <option value="">> 5</option>
+                                            </select>
+                                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-2">
+                                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="position-input">
+                                            Review
+                                        </label>
+                                        <div class="relative">
+                                            <select name="ectc_filter" id="review-input" class="text-sm block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                                                <option value="">Any</option>
+                                                <option value="">NA</option>
+                                                <option value="">1</option>
+                                                <option value="">2</option>
+                                                <option value="">3</option>
+                                                <option value="">4</option>
+                                                <option value="">5</option>
+                                                <option value="">> 5</option>
+                                            </select>
+                                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-icon relative">
+                                <i class="text-gray-500 hover:text-gray-700 p-3 cursor-pointer lni lni-cog setting-more"></i>
+                                <div class="shadow bg-white rounded-lg absolute right-0 setting-menu-top w-48 bg-white z-20 pb-3 setting-menu md:right-auto md:left-0">
+                                    <div class="pointer px-3 py-2 flex justify-between items-center border-solid border-b border-gray-300 mb-2 cursor-pointer card-prop-more hover:bg-gray-200">
+                                        <span class="uppercase tracking-wide text-gray-700 text-xs font-bold">Card Properties</span>
+                                        <i class="lni lni-chevron-right text-gray-700 text-sm"></i>
+                                    </div>
+                                    <div class="px-3 py-1">
+                                        <label class="switchbtn">
+                                            <input type="checkbox" checked value="app-new">
+                                            <span class="switch-slider round"></span>
+                                        </label>
+                                        <span class="leading-5 text-gray-700 ml-2">New</span>
+                                    </div>
+                                    <div class="px-3 py-1">
+                                        <label class="switchbtn">
+                                            <input type="checkbox" checked value="app-machine-test">
+                                            <span class="switch-slider round"></span>
+                                        </label>
+                                        <span class="leading-5 text-gray-700 ml-2">Machine Test</span>
+                                    </div>
+                                    <div class="px-3 py-1">
+                                        <label class="switchbtn">
+                                            <input type="checkbox" checked value="app-hr-round">
+                                            <span class="switch-slider round"></span>
+                                        </label>
+                                        <span class="leading-5 text-gray-700 ml-2">HR Round</span>
+                                    </div>
+                                    <div class="px-3 py-1">
+                                        <label class="switchbtn">
+                                            <input type="checkbox" checked value="app-selected">
+                                            <span class="switch-slider round"></span>
+                                        </label>
+                                        <span class="leading-5 text-gray-700 ml-2">Selected</span>
+                                    </div>
+                                    <div class="px-3 py-1">
+                                        <label class="switchbtn">
+                                            <input type="checkbox" checked value="app-rejected">
+                                            <span class="switch-slider round"></span>
+                                        </label>
+                                        <span class="leading-5 text-gray-700 ml-2">Rejected</span>
+                                    </div>
+                                    <div class="shadow bg-white rounded-lg absolute top-0 right-0 left-0 w-48 bg-white z-30 pb-3 card-prop-menu">
+                                        <div class="cursor-pointer px-3 py-2 flex items-center border-solid border-b border-gray-300 mb-2 card-prop-back hover:bg-gray-200">
+                                            <i class="lni lni-chevron-left mr-3 text-gray-700 text-sm"></i>
+                                            <span class="uppercase tracking-wide text-gray-700 text-xs font-bold">Back</span>                                    
+                                        </div>
+                                        <div class="px-3 py-1">
+                                            <label class="switchbtn">
+                                                <input type="checkbox" checked value="app-position">
+                                                <span class="switch-slider round"></span>
+                                            </label>
+                                            <span class="leading-5 text-gray-700 ml-2">Position</span>
+                                        </div>
+                                        <div class="px-3 py-1">
+                                            <label class="switchbtn">
+                                                <input type="checkbox" checked value="app-date">
+                                                <span class="switch-slider round"></span>
+                                            </label>
+                                            <span class="leading-5 text-gray-700 ml-2">Date</span>
+                                        </div>
+                                        <div class="px-3 py-1">
+                                            <label class="switchbtn">
+                                                <input type="checkbox" checked value="app-exp">
+                                                <span class="switch-slider round"></span>
+                                            </label>
+                                            <span class="leading-5 text-gray-700 ml-2">Experience</span>
+                                        </div>
+                                        <div class="px-3 py-1">
+                                            <label class="switchbtn">
+                                                <input type="checkbox" checked value="app-ectc">
+                                                <span class="switch-slider round"></span>
+                                            </label>
+                                            <span class="leading-5 text-gray-700 ml-2">ECTC</span>
+                                        </div>
+                                        <div class="px-3 py-1">
+                                            <label class="switchbtn">
+                                                <input type="checkbox" checked value="app-review">
+                                                <span class="switch-slider round"></span>
+                                            </label>
+                                            <span class="leading-5 text-gray-700 ml-2">Review</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="text-sm bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded ml-4 fixed right-1 bottom-1 z-10 md:static md:text-base modal-toggle">
+                                <i class="lni lni-plus"></i> Add Application
+                            </button>
+                        </div>
+                        <div class="header-search-wrapper">
+                            <div class="inline-flex items-center bg-white w-full">
+                                <div class="relative flex-auto">
+                                    <input type="text" name="searck-word" class="text-sm block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="Type keyword...">
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
+                                        <i class="lni lni-search-alt"></i>
+                                    </div>
+                                </div>
+                                <i class="flex-initial lni lni-close p-3 cursor-pointer text-gray-500 close-search"></i>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>                        
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="mx-auto py-6 px-4 sm:px-6 lg:px-8 bg-gray-100 display-wrapper" id="table-display" style="display: block;">
+            <div class="flex flex-col">
+                <div class="-my-2 overflow-x-auto slick-scroll sm:-mx-6 lg:-mx-8">
+                  <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="shadow border-b border-gray-200 sm:rounded-lg">
+                      <table class="min-w-full divide-y divide-gray-200 sort-table">
+                        <thead>
+                          <tr class="bg-white">
+                            <th class="px-3 pt-4 pb-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercpy-3ase tracking-wider">
+                                <div class="drag-handle-disbaled"></div>
+                                <span>ID</span>
+                              </th>
+                            <th class="sortbale-col px-3 pt-4 pb-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                <div class="drag-handle-disbaled"></div>
+                                <div class="flex items-center justify-center">
+                                    <span>Name</span>
+                                    <span class="sort-icon ml-1 text-gray-500 hover:text-gray-700 cursor-pointer"><i class="lni lni-arrow-down"></i></span>
+                                </div>
+                            </th>
+                            <th class="sortbale-col draggable-col px-3 pt-4 pb-3 bg-gray-50 text-center text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                <div class="drag-handle"></div>
+                                <div class="flex items-center justify-center">
+                                    <span>Email</span>
+                                    <span class="sort-icon ml-1 text-gray-500 hover:text-gray-700 cursor-pointer"><i class="lni lni-arrow-down"></i></span>
+                                </div>
+                            </th>
+                            <th class="sortbale-col draggable-col px-3 pt-4 pb-3 bg-gray-50 text-center text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                <div class="drag-handle"></div>
+                                <div class="flex items-center justify-center">
+                                    <span>Phone</span>
+                                    <span class="sort-icon ml-1 text-gray-500 hover:text-gray-700 cursor-pointer"><i class="lni lni-arrow-down"></i></span>
+                                </div>
+                            </th>
+                            <th data-app-class="app-position" class="sortbale-col draggable-col px-3 pt-4 pb-3 bg-gray-50 text-center text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                <div class="drag-handle"></div>
+                                <div class="flex items-center justify-center">
+                                    <span>Position</span>
+                                    <span class="sort-icon ml-1 text-gray-500 hover:text-gray-700 cursor-pointer"><i class="lni lni-arrow-down"></i></span>
+                                </div>
+                            </th>
+                            <th data-app-class="app-date" class="sortbale-col draggable-col px-3 pt-4 pb-3 bg-gray-50 text-center text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                <div class="drag-handle"></div>
+                                <div class="flex items-center justify-center">
+                                    <span>Date</span>
+                                    <span class="sort-icon ml-1 text-gray-500 hover:text-gray-700 cursor-pointer"><i class="lni lni-arrow-down"></i></span>
+                                </div>
+                            </th>
+                            <th data-app-class="app-exp" class="sortbale-col draggable-col px-3 pt-4 pb-3 bg-gray-50 text-center text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                <div class="drag-handle"></div>
+                                <div class="flex items-center justify-center">
+                                    <span>Experience</span>
+                                    <span class="sort-icon ml-1 text-gray-500 hover:text-gray-700 cursor-pointer"><i class="lni lni-arrow-down"></i></span>
+                                </div>
+                            </th>
+                            <th data-app-class="app-ectc" class="sortbale-col draggable-col px-3 pt-4 pb-3 bg-gray-50 text-center text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                <div class="drag-handle"></div>
+                                <div class="flex items-center justify-center">
+                                    <span>ECTC</span>
+                                    <span class="sort-icon ml-1 text-gray-500 hover:text-gray-700 cursor-pointer"><i class="lni lni-arrow-down"></i></span>
+                                </div>
+                            </th>
+                            <th data-app-class="app-review" class="sortbale-col draggable-col px-3 pt-4 pb-3 bg-gray-50 text-center text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                <div class="drag-handle"></div>
+                                <div class="flex items-center justify-center">
+                                    <span>Review</span>
+                                    <span class="sort-icon ml-1 text-gray-500 hover:text-gray-700 cursor-pointer"><i class="lni lni-arrow-down"></i></span>
+                                </div>
+                            </th>
+                            <th class="sortbale-col draggable-col px-3 pt-4 pb-3 bg-gray-50 text-center text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                <div class="drag-handle"></div>
+                                Status
+                            </th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr data-app-class="app-new">
+                                <td class="px-3 py-4 whitespace-no-wrap">
+                                    <div class="text-sm leading-5 font-medium text-gray-900">
+                                    2020105
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0 h-10 w-10">
+                                        <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60" alt="">
+                                        </div>
+                                        <div class="ml-3">
+                                        <div class="text-sm leading-5 font-medium text-gray-900">
+                                            <span class="sort-value">Jane Cooper</span>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">jane.cooper@gmail.com</span>
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">08886668888</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-position" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">Shopify Developer</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-date" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">2020/10/20 </span>                           
+                                    </div>
+                                </td>
+                                <td data-app-class="app-exp" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">7.2</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-ectc" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">9.5</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-review" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">0</span>
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-200 text-gray-600">
+                                        <span class="sort-value">New</span>
+                                    </span>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="ml-auto card-more relative">
+                                        <i class="lni lni-more-alt p-2 rotate-180 text-gray-400 more-icon cursor-pointer"></i>
+                                        <div class="absolute top-100 right-0 bg-gray-100 py-1 shadow w-24 hidden more-menu text-left z-20">
+                                            <p><a href="#" class="text-gray-600 text-sm font-medium py-1 px-3 block hover:bg-gray-300"><i class="lni lni-pencil text-sm"></i> Edit</a></p>
+                                            <p class="hover:bg-gray-300"><a href="#" class="text-red-600 text-sm font-medium py-1 px-3 block"><i class="lni lni-close text-sm"></i> Delete</a></p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-app-class="app-hr-round">
+                                <td class="px-3 py-4 whitespace-no-wrap">
+                                  <div class="text-sm leading-5 font-medium text-gray-900">
+                                      2020104
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap">
+                                    <div class="flex items-center">
+                                    <div class="flex-shrink-0 h-10 w-10">
+                                        <img class="h-10 w-10 rounded-full" src="https://images.pexels.com/photos/936229/pexels-photo-936229.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                                    </div>
+                                    <div class="ml-3">
+                                        <div class="text-sm leading-5 font-medium text-gray-900">
+                                            <span class="sort-value">Will Carter</span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">willcarter6@gmail.com</span>
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">08886668888</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-position" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">Wordpress Developer</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-date" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">2020/10/15  </span>                           
+                                    </div>
+                                </td>
+                                <td data-app-class="app-exp" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">3.8</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-ectc" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">4.2</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-review" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">7.2</span>
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-600">
+                                        <span class="sort-value">HR Round</span>
+                                    </span>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="ml-auto card-more relative">
+                                        <i class="lni lni-more-alt p-2 rotate-180 text-gray-400 more-icon cursor-pointer"></i>
+                                        <div class="absolute top-100 right-0 bg-gray-100 py-1 shadow w-24 hidden more-menu text-left z-20">
+                                            <p><a href="#" class="text-gray-600 text-sm font-medium py-1 px-3 block hover:bg-gray-300"><i class="lni lni-pencil text-sm"></i> Edit</a></p>
+                                            <p class="hover:bg-gray-300"><a href="#" class="text-red-600 text-sm font-medium py-1 px-3 block"><i class="lni lni-close text-sm"></i> Delete</a></p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-app-class="app-machine-test">
+                                <td class="px-3 py-4 whitespace-no-wrap">
+                                  <div class="text-sm leading-5 font-medium text-gray-900">
+                                      2020103
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap">
+                                    <div class="flex items-center">
+                                    <div class="flex-shrink-0 h-10 w-10">
+                                        <img class="h-10 w-10 rounded-full" src="https://images.pexels.com/photos/3211476/pexels-photo-3211476.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                                    </div>
+                                    <div class="ml-3">
+                                        <div class="text-sm leading-5 font-medium text-gray-900">
+                                            <span class="sort-value">John Doe</span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">john.doe@gmail.com</span>
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">08886668888</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-position" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">UI/UX Developer</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-date" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">2020/10/14</span>                  
+                                    </div>
+                                </td>
+                                <td data-app-class="app-exp" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">4.8</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-ectc" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">5.5</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-review" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">6.0</span>
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-600">
+                                        <span class="sort-value">Machine Test</span>
+                                    </span>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="ml-auto card-more relative">
+                                        <i class="lni lni-more-alt p-2 rotate-180 text-gray-400 more-icon cursor-pointer"></i>
+                                        <div class="absolute top-100 right-0 bg-gray-100 py-1 shadow w-24 hidden more-menu text-left z-20">
+                                            <p><a href="#" class="text-gray-600 text-sm font-medium py-1 px-3 block hover:bg-gray-300"><i class="lni lni-pencil text-sm"></i> Edit</a></p>
+                                            <p class="hover:bg-gray-300"><a href="#" class="text-red-600 text-sm font-medium py-1 px-3 block"><i class="lni lni-close text-sm"></i> Delete</a></p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            
+                            <tr data-app-class="app-selected">
+                                <td class="px-3 py-4 whitespace-no-wrap">
+                                    <div class="text-sm leading-5 font-medium text-gray-900">
+                                    2020102
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 h-10 w-10">
+                                    <img class="h-10 w-10 rounded-full" src="https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                                    </div>
+                                    <div class="ml-3">
+                                    <div class="text-sm leading-5 font-medium text-gray-900">
+                                        <span class="sort-value">Terry Smith</span>
+                                    </div>
+                                    </div>
+                                </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">terry.smith@gmail.com</span>
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">08886668888</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-position" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">PHP Developer</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-date" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">2020/10/08</span>                         
+                                    </div>
+                                </td>
+                                <td data-app-class="app-exp" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">2.2</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-ectc" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">3.5</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-review" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">7.0</span>
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-600">
+                                        <span class="sort-value">Selected</span>
+                                    </span>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="ml-auto card-more relative">
+                                        <i class="lni lni-more-alt p-2 rotate-180 text-gray-400 more-icon cursor-pointer"></i>
+                                        <div class="absolute top-100 right-0 bg-gray-100 py-1 shadow w-24 hidden more-menu text-left z-20">
+                                            <p><a href="#" class="text-gray-600 text-sm font-medium py-1 px-3 block hover:bg-gray-300"><i class="lni lni-pencil text-sm"></i> Edit</a></p>
+                                            <p class="hover:bg-gray-300"><a href="#" class="text-red-600 text-sm font-medium py-1 px-3 block"><i class="lni lni-close text-sm"></i> Delete</a></p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-app-class="app-rejected">
+                                <td class="px-3 py-4 whitespace-no-wrap">
+                                  <div class="text-sm leading-5 font-medium text-gray-900">
+                                      2020101
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap">
+                                    <div class="flex items-center">
+                                    <div class="flex-shrink-0 h-10 w-10">
+                                        <img class="h-10 w-10 rounded-full" src="https://images.pexels.com/photos/1937434/pexels-photo-1937434.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                                    </div>
+                                    <div class="ml-3">
+                                        <div class="text-sm leading-5 font-medium text-gray-900">
+                                            <span class="sort-value">Alice Cole</span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">alicecole@gmail.com</span>
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">08886668888</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-position" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">UI/UX Developer</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-date" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">2020/10/04</span>                           
+                                    </div>
+                                </td>
+                                <td data-app-class="app-exp" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">1.8</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-ectc" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">2.5</span>
+                                    </div>
+                                </td>
+                                <td data-app-class="app-review" class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="text-sm leading-5 text-gray-700">
+                                        <span class="sort-value">2.0</span>
+                                    </div>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-600">
+                                        <span class="sort-value">Rejected</span>
+                                    </span>
+                                </td>
+                                <td class="px-3 py-4 whitespace-no-wrap text-center">
+                                    <div class="ml-auto card-more relative">
+                                        <i class="lni lni-more-alt p-2 rotate-180 text-gray-400 more-icon cursor-pointer"></i>
+                                        <div class="absolute top-100 right-0 bg-gray-100 py-1 shadow w-24 hidden more-menu text-left z-20">
+                                            <p><a href="#" class="text-gray-600 text-sm font-medium py-1 px-3 block hover:bg-gray-300"><i class="lni lni-pencil text-sm"></i> Edit</a></p>
+                                            <p class="hover:bg-gray-300"><a href="#" class="text-red-600 text-sm font-medium py-1 px-3 block"><i class="lni lni-close text-sm"></i> Delete</a></p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                          <!-- More rows... -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!--table display ends here-->
+
+        <div class="mx-auto py-6 px-4 sm:px-6 lg:px-8 bg-gray-100 display-wrapper w-full" id="board-display">
+            <div class="flex overflow-x-auto slick-scroll">
+                <div class="flex-1 mx-3 task-wrapper sortable" data-app-class="app-new">
+                    <h1 class="py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"><span class="h-3 w-3 rounded-full bg-gray-500 inline-block mr-1"></span> New</h1>
+                    <div class="shadow border-b border-gray-200 rounded-lg bg-white p-3 app-card draggable">
+                        <div class="flex items-center mb-1">
+                            <div class="flex-shrink-0 h-10 w-10">
+                                <img class="h-9 w-9 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60" alt="">
+                            </div>
+                            <div class="ml-3">
+                                <div class="leading-5 font-medium text-gray-900">
+                                Jane Cooper
+                                </div>
+                            </div>
+                            <div class="ml-auto card-more relative">
+                                <i class="lni lni-more-alt p-2 pr-0 rotate-180 text-gray-400 more-icon"></i>
+                                <div class="absolute top-100 right-0 bg-gray-100 py-1 shadow w-32 hidden more-menu">
+                                    <p><a href="#" class="text-gray-600 text-sm font-medium py-1 px-3 block hover:bg-gray-300"><i class="lni lni-pencil text-sm"></i> Edit</a></p>
+                                    <p class="hover:bg-gray-300"><a href="#" class="text-red-600 text-sm font-medium py-1 px-3 block"><i class="lni lni-close text-sm"></i> Delete</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="app-email text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-envelope mr-2"></i>
+                            <span>jane.cooper@gmail.com</span>
+                        </p>
+                        <p class="app-phone text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-phone mr-2"></i>
+                            <span>08886668888</span>
+                        </p>
+                        <p data-app-class="app-position"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-briefcase mr-2"></i>
+                            <span>Shopify Developer</span>
+                        </p>
+                        <p data-app-class="app-date"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-calendar mr-2"></i>
+                            <span>2020/10/20</span>
+                        </p>
+                        <p data-app-class="app-exp"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-shield mr-2"></i>
+                            <span>7.2</span>
+                        </p>
+                        <p data-app-class="app-ectc"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-rupee mr-2"></i>
+                            <span>9.5</span>
+                        </p>
+                        <p data-app-class="app-review"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-star mr-2"></i>
+                            <span>0</span>
+                        </p>
+                    </div><!---card ends-->
+                </div>
+                <!--New applications wrapper ends-->
+                <div class="flex-1 mx-3 task-wrapper sortable" data-app-class="app-machine-test">
+                    <h1 class="py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"><span class="h-3 w-3 rounded-full bg-blue-500 inline-block mr-1"></span> Machine Test</h1>
+                    <div class="shadow border-b border-gray-200 rounded-lg bg-white p-3 app-card draggable">
+                        <div class="flex items-center mb-1">
+                            <div class="flex-shrink-0 h-10 w-10">
+                                <img class="h-9 w-9 rounded-full" src="https://images.pexels.com/photos/3211476/pexels-photo-3211476.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                            </div>
+                            <div class="ml-3">
+                                <div class="leading-5 font-medium text-gray-900">
+                                John Doe
+                                </div>
+                            </div>
+                            <div class="ml-auto card-more relative">
+                                <i class="lni lni-more-alt p-2 pr-0 rotate-180 text-gray-400 more-icon"></i>
+                                <div class="absolute top-100 right-0 bg-gray-100 py-1 shadow w-32 hidden more-menu">
+                                    <p><a href="#" class="text-gray-600 text-sm font-medium py-1 px-3 block hover:bg-gray-300"><i class="lni lni-pencil text-sm"></i> Edit</a></p>
+                                    <p class="hover:bg-gray-300"><a href="#" class="text-red-600 text-sm font-medium py-1 px-3 block"><i class="lni lni-close text-sm"></i> Delete</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="app-email text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-envelope mr-2"></i>
+                            <span>john.doe@gmail.com</span>
+                        </p>
+                        <p class="app-phone text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-phone mr-2"></i>
+                            <span>08886668888</span>
+                        </p>
+                        <p data-app-class="app-position"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-briefcase mr-2"></i>
+                            <span>UI/UX Developer</span>
+                        </p>
+                        <p data-app-class="app-date" class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-calendar mr-2"></i>
+                            <span>2020/10/14</span>
+                        </p>
+                        <p data-app-class="app-exp" class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-shield mr-2"></i>
+                            <span>4.8</span>
+                        </p>
+                        <p data-app-class="app-ectc" class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-rupee mr-2"></i>
+                            <span>5.5</span>
+                        </p>
+                        <p data-app-class="app-review"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-star mr-2"></i>
+                            <span>6.0</span>
+                        </p>
+                    </div><!---card ends-->
+                </div>
+                <!--Machine test applications wrapper ends-->
+                <div class="flex-1 mx-3 task-wrapper sortable" data-app-class="app-hr-round">
+                    <h1 class="py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"><span class="h-3 w-3 rounded-full bg-orange-500 inline-block mr-1"></span> HR Round</h1>
+                    <div class="shadow border-b border-gray-200 rounded-lg bg-white p-3 app-card draggable">
+                        <div class="flex items-center mb-1">
+                            <div class="flex-shrink-0 h-10 w-10">
+                                <img class="h-9 w-9 rounded-full" src="https://images.pexels.com/photos/936229/pexels-photo-936229.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                            </div>
+                            <div class="ml-3">
+                                <div class="leading-5 font-medium text-gray-900">
+                                Will Carter
+                                </div>
+                            </div>
+                            <div class="ml-auto card-more relative">
+                                <i class="lni lni-more-alt p-2 pr-0 rotate-180 text-gray-400 more-icon"></i>
+                                <div class="absolute top-100 right-0 bg-gray-100 py-1 shadow w-32 hidden more-menu">
+                                    <p><a href="#" class="text-gray-600 text-sm font-medium py-1 px-3 block hover:bg-gray-300"><i class="lni lni-pencil text-sm"></i> Edit</a></p>
+                                    <p class="hover:bg-gray-300"><a href="#" class="text-red-600 text-sm font-medium py-1 px-3 block"><i class="lni lni-close text-sm"></i> Delete</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="app-email text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-envelope mr-2"></i>
+                            <span>willcarter6@gmail.com</span>
+                        </p>
+                        <p class="app-phone text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-phone mr-2"></i>
+                            <span>08886668888</span>
+                        </p>
+                        <p data-app-class="app-position"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-briefcase mr-2"></i>
+                            <span>WordPress Developer</span>
+                        </p>
+                        <p data-app-class="app-date"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-calendar mr-2"></i>
+                            <span>2020/10/15</span>
+                        </p>
+                        <p data-app-class="app-exp"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-shield mr-2"></i>
+                            <span>3.8</span>
+                        </p>
+                        <p data-app-class="app-ectc"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-rupee mr-2"></i>
+                            <span>4.2</span>
+                        </p>
+                        <p data-app-class="app-review"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-star mr-2"></i>
+                            <span>7.2</span>
+                        </p>
+                    </div><!---card ends-->
+                </div>
+                <!--HR Round applications wrapper ends-->
+                <div class="flex-1 mx-3 task-wrapper sortable" data-app-class="app-selected">
+                    <h1 class="py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"><span class="h-3 w-3 rounded-full bg-green-500 inline-block mr-1"></span> Selected</h1>
+                    <div class="shadow border-b border-gray-200 rounded-lg bg-white p-3 app-card draggable">
+                        <div class="flex items-center mb-1">
+                            <div class="flex-shrink-0 h-10 w-10">
+                                <img class="h-9 w-9 rounded-full" src="https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                            </div>
+                            <div class="ml-3">
+                                <div class="leading-5 font-medium text-gray-900">
+                                Terry Smith
+                                </div>
+                            </div>
+                            <div class="ml-auto card-more relative">
+                                <i class="lni lni-more-alt p-2 pr-0 rotate-180 text-gray-400 more-icon"></i>
+                                <div class="absolute top-100 right-0 bg-gray-100 py-1 shadow w-32 hidden more-menu">
+                                    <p><a href="#" class="text-gray-600 text-sm font-medium py-1 px-3 block hover:bg-gray-300"><i class="lni lni-pencil text-sm"></i> Edit</a></p>
+                                    <p class="hover:bg-gray-300"><a href="#" class="text-red-600 text-sm font-medium py-1 px-3 block"><i class="lni lni-close text-sm"></i> Delete</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="app-email text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-envelope mr-2"></i>
+                            <span>terry.smith@gmail.com</span>
+                        </p>
+                        <p class="app-phone text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-phone mr-2"></i>
+                            <span>08886668888</span>
+                        </p>
+                        <p data-app-class="app-position"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-briefcase mr-2"></i>
+                            <span>PHP Developer</span>
+                        </p>
+                        <p data-app-class="app-date"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-calendar mr-2"></i>
+                            <span>2020/10/08</span>
+                        </p>
+                        <p data-app-class="app-exp"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-shield mr-2"></i>
+                            <span>2.2</span>
+                        </p>
+                        <p data-app-class="app-ectc"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-rupee mr-2"></i>
+                            <span>3.5</span>
+                        </p>
+                        <p data-app-class="app-review"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-star mr-2"></i>
+                            <span>7.0</span>
+                        </p>
+                    </div><!---card ends-->
+                </div>
+                <!--Selected applications wrapper ends-->
+                <div class="flex-1 mx-3 task-wrapper sortable" data-app-class="app-rejected">
+                    <h1 class="py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"><span class="h-3 w-3 rounded-full bg-red-500 inline-block mr-1"></span> Rejected</h1>
+                    <div class="shadow border-b border-gray-200 rounded-lg bg-white p-3 app-card draggable">
+                        <div class="flex items-center mb-1">
+                            <div class="flex-shrink-0 h-10 w-10">
+                                <img class="h-9 w-9 rounded-full" src="https://images.pexels.com/photos/1937434/pexels-photo-1937434.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                            </div>
+                            <div class="ml-3">
+                                <div class="leading-5 font-medium text-gray-900">
+                                Alice Cole
+                                </div>
+                            </div>
+                            <div class="ml-auto card-more relative">
+                                <i class="lni lni-more-alt p-2 pr-0 rotate-180 text-gray-400 more-icon"></i>
+                                <div class="absolute top-100 right-0 bg-gray-100 py-1 shadow w-32 hidden more-menu">
+                                    <p><a href="#" class="text-gray-600 text-sm font-medium py-1 px-3 block hover:bg-gray-300"><i class="lni lni-pencil text-sm"></i> Edit</a></p>
+                                    <p class="hover:bg-gray-300"><a href="#" class="text-red-600 text-sm font-medium py-1 px-3 block"><i class="lni lni-close text-sm"></i> Delete</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="app-email text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-envelope mr-2"></i>
+                            <span>alicecole@gmail.com</span>
+                        </p>
+                        <p class="app-phone text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-phone mr-2"></i>
+                            <span>08886668888</span>
+                        </p>
+                        <p data-app-class="app-position"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-briefcase mr-2"></i>
+                            <span>UI/UX Developer</span>
+                        </p>
+                        <p data-app-class="app-date"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-calendar mr-2"></i>
+                            <span>2020/10/04</span>
+                        </p>
+                        <p data-app-class="app-exp"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-shield mr-2"></i>
+                            <span>1.8</span>
+                        </p>
+                        <p data-app-class="app-ectc"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-rupee mr-2"></i>
+                            <span>2.5</span>
+                        </p>
+                        <p data-app-class="app-review"  class="text-sm leading-4 py-1 text-gray-700">
+                            <i class="text-gray-500 lni lni-star mr-2"></i>
+                            <span>2.0</span>
+                        </p>
+                    </div><!---card ends-->
+                </div>
+                <!--Rejected applications wrapper ends-->
+            </div>
+        </div>
+        <!--board display ends here-->
+    </main>
+
+    <!--add application form-->
+    <div class="modal">
+        <div class="modal-overlay modal-toggle"></div>
+        <div class="modal-wrapper modal-transition">
+          <div class="modal-header py-3 px-4">
+            <button class="modal-close modal-toggle"><i class="lni lni-close"></i></button>
+            <h2 class="modal-heading text-2xl font-bold text-gray-900">Add new application</h2>
+          </div>
+          
+          <div class="modal-body p-2">
+            <div class="modal-content">
+                <form class="application-form">
+                    <div class="sm:flex">
+                        <div class="flex-1 m-2">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">First Name</label>
+                            <input type="text" name="first_name" class="text-sm block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" pattern="[A-Za-z\s]+" required oninvalid="setCustomValidity('Required field. Only letters (either case) allowed')" oninput="setCustomValidity('')" placeholder="e.g. John">
+                        </div>
+                        <div class="flex-1 m-2">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Last Name</label>
+                            <input type="text" name="last_name" class="text-sm block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" pattern="[A-Za-z\s]+" required oninvalid="setCustomValidity('Required field. Only letters (either case) allowed')" oninput="setCustomValidity('')" placeholder="e.g. Doe">
+                        </div>
+                    </div>
+                    <div class="sm:flex">
+                        <div class="flex-1 m-2">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Email</label>
+                            <input type="email" name="email" class="text-sm block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  required placeholder="e.g. johndoe@example.com">
+                        </div>
+                        <div class="flex-1 m-2">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Phone No.</label>
+                            <input type="tel" name="phone" class="text-sm block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" pattern="^\d{10}$" maxlength="10" required oninvalid="setCustomValidity('Required field. Please match requested format.')" oninput="setCustomValidity('')" placeholder="e.g. 8888888888">
+                        </div>
+                    </div>
+                    <div class="sm:flex">
+                        <div class="flex-1 m-2">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Applied for</label>
+                            <div class="relative">
+                                <select name="position" class="text-sm block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                                    <option value="">PHP Developer</option>
+                                    <option value="">Shopify Developer</option>
+                                    <option value="">UI/UX Developer</option>
+                                    <option value="">WordPress Developer</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-1 m-2">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Applied on</label>
+                            <input type="date" name="applied_on" class="text-sm block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 disable-future-dates"  required>
+                        </div>
+                    </div>
+                    <div class="sm:flex">
+                        <div class="flex-1 m-2">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Experience</label>
+                            <input type="text" name="experience" class="text-sm block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" onkeypress='return event.charCode >= 48 && event.charCode <= 57 || event.charCode == 46' required oninvalid="setCustomValidity('Required field.')" oninput="setCustomValidity('')" placeholder="e.g. 3.2">
+                        </div>
+                        <div class="flex-1 m-2">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Expected CTC</label>
+                            <input type="text" name="last_name" class="text-sm block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" onkeypress='return event.charCode >= 48 && event.charCode <= 57 || event.charCode == 46' required oninvalid="setCustomValidity('Required field.')" oninput="setCustomValidity('')" placeholder="e.g. 8.0">
+                        </div>
+                    </div>
+                    <div class="m-2">
+                        <input type="submit" value="Add Application" class="text-sm bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded cursor-pointer md:text-base">
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!--scripts-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
+    <script src="js/jquery.dragtable.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

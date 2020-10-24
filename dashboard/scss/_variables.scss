@@ -1,0 +1,93 @@
+$baseFont: 'Work Sans', sans-serif;
+$txtFont: 'Work Sans', sans-serif;
+$primaryColor:#0c4579;
+$secondColor:#35983b;
+$tertiaryColor: #fad104;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin bg-cover{
+  -webkit-background-size:cover;
+     -moz-background-size:cover;
+       -o-background-size:cover;
+          background-size:cover;
+}
+
+@mixin transit($duration){
+	-webkit-transition: all $duration ease-in;
+	   -moz-transition: all $duration ease-in;
+	     -o-transition: all $duration ease-in;
+	        transition: all $duration ease-in;
+}
+
+@mixin linearGradient($color1, $color2){
+    background: $color1; /* Old browsers */
+    background: -moz-linear-gradient(right,$color1, $color2); /* FF3.6+ */
+    // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop(100%,$color2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,$color1,$color2); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(right,$color1,$color2); /* Opera 11.10+ */
+    background: -ms-linear-gradient(right,$color1,$color2); /* IE10+ */
+    background: linear-gradient(to right,$color1,$color2); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin rotate($deg){
+  transform:rotate($deg);
+  -webkit-transform:rotate($deg);
+  -moz-transform:rotate($deg);
+  -ms-transform:rotate($deg);
+  -o-transform:rotate($deg);
+}
+@mixin scale($val){
+  transform:scale($val);
+  -webkit-transform:scale($val);
+  -moz-transform:scale($val);
+  -ms-transform:scale($val);
+  -o-transform:scale($val);
+}
+@mixin translatex($x){
+  transform:translateX($x);
+  -webkit-transform:translateX($x);
+  -moz-transform:translateX($x);
+  -ms-transform:translateX($x);
+  -o-transform:translateX($x);
+}
+@mixin masonry($col){
+  column-count: $col;
+  -moz-column-count: $col;
+  -webkit-column-count: $col;
+}
+@mixin col-gap($gap){
+  column-gap: $gap;
+  -moz-column-gap: $gap;
+  -webkit-column-gap: $gap;
+}
+@mixin animation ($animation_name) {
+    -webkit-animation-name: $animation_name;
+    -moz-animation-name: $animation_name;
+    -o-animation-name: $animation_name;
+    animation-name: $animation_name;
+}
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @-o-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+

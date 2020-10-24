@@ -1,0 +1,75 @@
+{%extends 'layout.html' %}
+
+{%block content %}
+<section class="text-gray-700 body-font relative">
+  <form action="" method="POST">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-100">Create Project</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">You can do Better for others</p>
+    </div>
+
+   <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+    <div class="px-4 py-5 border-b border-gray-200 sm:px-6">
+    <h3 class="text-lg leading-6 font-medium text-gray-900">
+     {{form.topic.label}}
+    </h3>
+    <p class="mt-1 max-w-2xl text-sm leading-5 text-gray-500">
+    {{form.topic(class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2", placeholder="Catagory" ,type="text")}}
+    </p>
+  </div>
+  <div>
+    <dl>
+      <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm leading-5 font-medium text-gray-500">
+          {{form.name.label()}}
+        </dt>
+        <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
+    {{form.name(class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2", placeholder="Topic of project" ,type="text")}}
+        </dd>
+      </div>
+      <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm leading-5 font-medium text-gray-500">
+         {{form.price.label}}
+        </dt>
+        <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
+          {{form.price(class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2", placeholder="Price of project", type="number")}}
+        </dd>
+      </div>
+      <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm leading-5 font-medium text-gray-500">
+         {{form.add_on.label}}
+        </dt>
+        <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
+         {{form.add_on(class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2", placeholder="Completion Time " ,type="datetime-local")}}
+        </dd>
+      </div>
+      <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm leading-5 font-medium text-gray-500">
+         {{form.duration.label}}
+        </dt>
+        <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
+          {{form.duration(class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2", placeholder="Duration" ,type="number")}}
+      
+        </dd>
+      </div>
+    
+      <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm leading-5 font-medium text-gray-500">
+         {{form.description.label}}
+        </dt>
+        <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
+         {{form.description(class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none h-48 focus:border-indigo-500 text-base px-4 py-2 resize-none block" ,placeholder="Description of Project")}}
+        </dd>
+      </div>
+    </dl> 
+  </div>
+</div>
+<div class="p-2 w-full">
+    {{form.submit(class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg cursor")}}
+</div>
+</div>
+</form>
+</section>
+
+{%endblock content %}

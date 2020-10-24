@@ -1,0 +1,100 @@
+{% extends 'layout.html' %}
+
+{%block content %}
+
+    <div class="flex items-center min-h-screen p-6 pt-12 bg-gray-50">
+      <div class="flex-1 h-full max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl">
+        <div class="flex flex-col overflow-y-auto md:flex-row">
+          <div class="h-32 md:h-auto md:w-1/2">
+            <img aria-hidden="true" class="object-cover w-full h-full " src="static/img/team.jpg" alt="Office">
+           
+          </div>
+          <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
+            <div class="w-full">
+              <h1 class="mb-4 text-xl font-semibold text-gray-700 ">
+                Create account
+              </h1>
+              <form action="" method="post">
+                {{ form.hidden_tag() }}
+                <div>
+                <div>
+                    {{form.username.label(class="block text-sm text-gray-700")}}
+    
+                    {% if form.username.errors %}
+                    {{ form.username(class="block w-full mt-1 text-sm  focus:border-purple-400 focus:outline-none focus:shadow-outline-purple form-input" ,placeholder="Jane Doe" )}}
+
+                    <div>
+                        {% for error in form.username.errors %}
+                            <span class="text-red-700 text-sm font-medium ">{{ error}}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                {{ form.username(class="block w-full mt-1 text-sm  focus:border-purple-400 focus:outline-none focus:shadow-outline-purple form-input" ,placeholder="Jane Doe" )}}
+                {% endif %}
+                </div>
+                <div>
+                  {{form.email.label(class="block text-sm text-gray-700")}}
+  
+                  {% if form.email.errors %}
+                  {{ form.email(class="block w-full mt-1 text-sm  focus:border-purple-400 focus:outline-none focus:shadow-outline-purple form-input" ,placeholder="admin@gmail.com" )}}
+
+                  <div>
+                      {% for error in form.email.errors %}
+                          <span class="text-red-700 text-sm font-medium ">{{ error}}</span>
+                      {% endfor %}
+                  </div>
+              {% else %}
+              {{ form.email(class="block w-full mt-1 text-sm  focus:border-purple-400 focus:outline-none focus:shadow-outline-purple form-input" ,placeholder="Jane Doe" )}}
+              {% endif %}
+              </div>
+              <div>
+                {{form.password.label(class="block text-sm text-gray-700")}}
+  
+                {% if form.password.errors %}
+                {{ form.password(class="block w-full mt-1 text-sm focus:border-purple-400 focus:outline-none focus:shadow-outline-purple form-input" ,placeholder="***************" ,type="password")}}
+  
+                <div>
+                    {% for error in form.password.errors %}
+                        <span class="text-red-700 text-sm font-medium ">{{ error}}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+            {{ form.password(class="block w-full mt-1 text-sm focus:border-purple-400 focus:outline-none focus:shadow-outline-purple form-input" ,placeholder="***************" ,type="password")}}
+            {% endif %}
+            </div>
+            
+          
+            <div>
+              {{form.confirm_password.label(class="block text-sm text-gray-700")}}
+
+              {% if form.confirm_password.errors %}
+              {{ form.confirm_password(class="block w-full mt-1 text-sm focus:border-purple-400 focus:outline-none focus:shadow-outline-purple form-input" ,placeholder="***************" ,type="password")}}
+
+              <div>
+                  {% for error in form.confirm_password.errors %}
+                      <span class="text-red-700 text-sm font-medium ">{{ error}}</span>
+                  {% endfor %}
+              </div>
+          {% else %}
+          {{ form.confirm_password(class="block w-full mt-1 text-sm focus:border-purple-400 focus:outline-none focus:shadow-outline-purple form-input" ,placeholder="***************" ,type="confirm_password")}}
+          {% endif %}
+          </div>
+             </div>
+             
+
+
+                {{form.submit(class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple")}}
+      
+            </form>
+              <p class="mt-4">
+                <a class="text-sm font-medium text-purple-600 hover:underline" href="{{url_for('login')}}">
+                  Already have an account? Login
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+{% endblock %}
