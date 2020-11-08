@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.2/tailwind.min.css"
+    integrity="sha512-l7qZAq1JcXdHei6h2z8h8sMe3NbMrmowhOl+QkP3UhifPpCW2MC4M0i26Y8wYpbz1xD9t61MLT9L1N773dzlOA=="
+    crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+  <!-- ===== CSS ===== -->
+  <link rel="shortcut icon" href="../static/img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../static/styles.css">
+  <link rel="stylesheet" href="../static/custom.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <title>LolGoal : Building the projects with others</title>
+</head>
+
+<body class="bg-gray-900">
+  
+  <header class="header">
+    <a href="index.html" class="header__logo">
+      <img src="../static/img/lolGoal.png" alt=""></a>
+
+    <i class='bx bx-menu header__toggle' id="header-toggle"></i>
+
+    <nav class="nav" id="nav-menu">
+      <div class="nav__content bd-grid">
+        <a href="index.html" class="nav__fil">
+          <div class="nav__img">
+            <img src="../static/img/lolGoal.png" alt="">
+          </div>
+        </a>
+
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__link">HOME</a></li>
+
+            <li class="nav__item ">
+              <a href="./business.html" class="nav__link">BUSINESS</i></a>
+
+
+            </li>
+
+            <li class="nav__item"><a href="projectlist.html" class="nav__link">PROJECTS</a></li>
+
+            <li class="nav__item dropdown">
+              <a href="#" class="nav__link dropdown__link">MEETINGS<i class='bx bx-chevron-down dropdown__icon'></i></a>
+
+
+              <ul class="dropdown__menu">
+                <li class="dropdown__item"><a href="meetingsai.html" class="nav__link">AI</a></li>
+                <li class="dropdown__item"><a href="./meetingscode.html" class="nav__link">SOFTWARE</a></li>
+              </ul>
+            </li>
+            <div x-data="{ show: false }">
+
+
+              <button @click={show=true} type="button"
+                class="ml-2 inline-flex text-white bg-indigo-800 border-0 py-2 px-6 focus:outline-none   hover:bg-blue-800 rounded text-lg mb-2">
+                LOGIN</button></a>
+              <div x-show="show" tabindex="0"
+                class="z-40 overflow-auto left-0 top-0 bottom-0 right-0 w-full h-full fixed">
+                <div @click.away="show = false" class="z-50 relative p-3 mx-auto my-0 max-w-full" style="width: 600px;">
+                  <div class="bg-white rounded shadow-lg border flex flex-col overflow-hidden">
+                    <button @click={show=false}
+                      class="fill-current h-6 w-6 absolute right-0 top-0 m-6 font-3xl font-bold">X</button>
+
+                    <div class="flex justify-center mb-5 mt-5">
+                      <a href="./mentorlogin.html"><button @click={show=true} type="button"
+                        class="ml-2 inline-flex text-white bg-blue-900 border-0 py-2 px-6 focus:outline-none hover:bg-blue-800 rounded text-lg">
+                        MENTOR</button></a>
+                        <a href="./studentlogin.html"><button @click={show=true} type="button"
+                        class="ml-2 inline-flex text-white bg-blue-900 border-0 py-2 px-6 focus:outline-none hover:bg-blue-800 rounded text-lg">
+                        STUDENT</button></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="z-40 overflow-auto left-0 top-0 bottom-0 right-0 w-full h-full fixed bg-black opacity-50">
+                </div>
+              </div>
+            </div>
+            <div x-data="{ show: false }">
+
+              <button @click={show=true} type="button"
+                class="ml-2 inline-flex text-white bg-indigo-800 border-0 py-2 px-6 focus:outline-none   hover:bg-blue-800 rounded text-lg mb-2">
+                SIGN IN</button></a>
+              <div x-show="show" tabindex="0"
+                class="z-40 overflow-auto left-0 top-0 bottom-0 right-0 w-full h-full fixed">
+                <div @click.away="show = false" class="z-50 relative p-3 mx-auto my-0 max-w-full" style="width: 600px;">
+                  <div class="bg-white rounded shadow-lg border flex flex-col overflow-hidden">
+                    <button @click={show=false}
+                      class="fill-current h-6 w-6 absolute right-0 top-0 m-6 font-3xl font-bold">X</button>
+
+                    <div class="flex justify-center mb-5 mt-5">
+                      <a href="./mentorsignup.html"><button @click={show=true} type="button"
+                        class="ml-2 inline-flex text-white bg-blue-900 border-0 py-2 px-6 focus:outline-none hover:bg-blue-800 rounded text-lg">
+                        MENTOR</button></a>
+                        <a href="./studentsignup.html"><button @click={show=true} type="button"
+                        class="ml-2 inline-flex text-white bg-blue-900 border-0 py-2 px-6 focus:outline-none hover:bg-blue-800 rounded text-lg">
+                        STUDENT</button></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="z-40 overflow-auto left-0 top-0 bottom-0 right-0 w-full h-full fixed bg-black opacity-50">
+                </div>
+              </div>
+            </div>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="flex items-center min-h-screen p-6 bg-gray-900">
+    <div class="flex-1 h-full max-w-4xl mx-auto overflow-hidden  rounded-lg shadow-xl bg-gray-800">
+      <div class="flex flex-col overflow-y-auto md:flex-row">
+        <div class="h-32 md:h-auto md:w-1/2">
+          <img aria-hidden="true" class="object-cover w-full h-full" src="/static/img/yourwork.svg"
+            alt="Office">
+        </div>
+        <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
+          <div class="w-full">
+            <h1 class="mb-4 text-xl font-semibold text-gray-200">
+              Login
+            </h1>
+
+            <!--Form  for mentor login -->
+            <form action="" method="POST" id="login_mentor">
+              <div>
+                <div>
+                  <label class="block text-sm text-gray-700 mb-2">Userame</label>
+                  <input
+                    class="w-full bg-gray-800 rounded border border-gray-700 text-white focus:outline-none focus:border-indigo-500 text-base px-4 py-2"
+                    placeholder="john@gmail.com" type="text" name="username" id="username">
+                </div>
+                <div>
+                  <label class="block text-sm text-gray-700 mb-2 mt-2">Password</label>
+                  <input
+                    class="w-full bg-gray-800 rounded border border-gray-700 text-white focus:outline-none focus:border-indigo-500 text-base px-4 py-2"
+                    placeholder="************" type="password" name="password" id="password">
+                    <p class="text-red-500 text-xs italic ">Please choose a password.</p>
+
+                    <!-- Error messages -->
+                </div>
+              </div>
+
+
+
+              <button
+                class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                type="submit" value="submit">Submit</button>
+
+            </form>
+           
+   <p class="result"></p>
+
+
+  <script>
+ (function ($) {
+    $.fn.serializeFormJSON = function () {
+
+        var o = {};
+        var a = this.serializeArray();
+        $.each(a, function () {
+            if (o[this.name]) {
+                if (!o[this.name].push) {
+                    o[this.name] = [o[this.name]];
+                }
+                o[this.name].push(this.value || '');
+            } else {
+                o[this.name] = this.value || '';
+            }
+        });
+        return o;
+    };
+})(jQuery);
+
+$('form').submit(function (e) {
+    e.preventDefault();
+    var data = $(this).serializeFormJSON();
+    console.log(data);
+
+    /* Object
+     */
+});
+
+  </script>
+
+
+
+            <!--Form ended-->
+
+
+            <p class="mt-4">
+              <a class="text-sm font-medium text-green-600 hover:underline" href="forgotpassword">
+                Forgot Password
+              </a>
+            </p>
+            <p class="mt-1">
+              <a class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline"
+                href="./create-account.html">
+                Have not account Let's Create account
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer Section -->
+  <footer class="text-blue-800 bg-indigo-900 body-font" id="footer">
+    <div
+      class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-no-wrap flex-wrap flex-col">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+          <img src="../static/img/lolGoal.png" alt="">
+        </a>
+        <p class="mt-2 text-blue-600 hover:text-white">Find your next project,mentor </p>
+        <p class="text-blue-600 hover:text-white">to enhance your project-based learning</p>
+
+      </div>
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">UPCOMING</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-blue-600 hover:text-white" href="#">Python Course</a>
+            </li>
+            <li>
+              <a class="text-blue-600 hover:text-white" href="gitevent.html">Github Challange</a>
+            </li>
+            <li>
+              <a class="text-blue-600 hover:text-white" href="#">Resume Guide</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">SERVICES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-blue-600 hover:text-white" href="./projectlist.html">Projects</a>
+            </li>
+            <li>
+              <a class="text-blue-600 hover:text-white" href="./meetingsai.html">AI Meetings
+              </a>
+            </li>
+            <li>
+              <a class="text-blue-600 hover:text-white" href="./meetingscode.html">Code Meetings</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">BUSINESS</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-blue-600 hover:text-white" href="./business.html">Partner</a>
+            </li>
+            <li>
+              <a class="text-blue-600 hover:text-white" href="./business.html">Choose team</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">OTHERS</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-blue-600 hover:text-white" target="_blank"
+                href="https://angel.co/company/lolgoal/jobs/">Jobs</a>
+            </li>
+            <li>
+              <a class="text-blue-600 hover:text-white" href="https://github.com/lolgoal/">Portfolio</a>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-800">
+      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <p class="text-blue-600 text-sm text-center sm:text-left">© 2020- 2021 Lolgoal
+
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          <a class="text-blue-600">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+              viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-blue-600">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+              viewBox="0 0 24 24">
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+              </path>
+            </svg>
+          </a>
+          <a class="ml-3 text-blue-600">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="w-5 h-5" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-blue-600">
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+              <path stroke="none"
+                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <!--===== MAIN JS =====-->
+  <script src="../static/main.js"></script>
+  
+</body>
+
+</html>

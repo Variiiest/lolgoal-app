@@ -1,0 +1,103 @@
+<!-- After login Navbar -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.2/tailwind.min.css"
+        integrity="sha512-l7qZAq1JcXdHei6h2z8h8sMe3NbMrmowhOl+QkP3UhifPpCW2MC4M0i26Y8wYpbz1xD9t61MLT9L1N773dzlOA=="
+        crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+    <!-- ===== CSS ===== -->
+    <link rel="shortcut icon" href="../static/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="../static/custom.css">
+
+    <title>LolGoal : Building the projects with others</title>
+</head>
+
+<body class="bg-gray-900">
+    <header class="header">
+        <a href="index.html" class="header__logo">
+            <img src="../static/img/lolGoal.png" alt=""></a>
+
+        <i class='bx bx-menu header__toggle' id="header-toggle"></i>
+
+        <nav class="nav" id="nav-menu">
+            <div class="nav__content bd-grid">
+                <a href="index.html" class="nav__fil">
+                    <div class="nav__img">
+                        <img src="../static/img/lolGoal.png" alt="">
+                    </div>
+                </a>
+
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">HOME</a></li>
+
+                        <li class="nav__item ">
+                            <a href="StartUp.html" class="nav__link">BUSINESS</i></a>
+
+
+                        </li>
+
+                        <li class="nav__item"><a href="projectlist.html" class="nav__link">PROJECTS</a></li>
+
+                        <li class="nav__item dropdown">
+                            <a href="#" class="nav__link dropdown__link">MEETINGS<i
+                                    class='bx bx-chevron-down dropdown__icon'></i></a>
+
+
+                            <ul class="dropdown__menu">
+                                <li class="dropdown__item"><a href="meetings.html" class="nav__link">AI</a></li>
+                                <li class="dropdown__item"><a href="./meetings.html" class="nav__link">SOFTWARE</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- After login this will change -->
+
+
+                        <li class="nav__item dropdown">
+                            <a href="#" class="nav__link dropdown__link">
+                                <span class="text-green-500">Welcome ,Fermat</span>
+                                <i class='bx bx-chevron-down dropdown__icon'></i></a>
+
+
+                            <ul class="dropdown__menu">
+                                <li class="dropdown__item"><a href="account.html" class="nav__link">Account</a></li>
+                                <li class="dropdown__item"><a href="./meetings.html" class="nav__link">
+                                        <span class="text-red-600">Logout</span> </a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+    <!--===== MAIN JS =====-->
+    <script src="../static/main.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
